@@ -6,73 +6,28 @@
  * @flow strict-local
  */
 
-import React, { useEffect } from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+//IMPORTAR COMPONENTES, LIBRERIAS REQUERIDAS
 
-import Cabecera from './src/components/Cabecera'
-import Tarjeta from './src/components/Tarjeta'
+import React from 'react';
+import { View } from 'react-native';
+import Header from './src/componentes/Header';
+import ListaMascotas from './src/componentes/ListaMascotas';
+//CUERPO DEL COMPONENTE
 
-const App: () => React$Node = () => {
-
-  const [mascotas, llenarMascotas] = React.useState([]);
-
-  const obtenerMascotas = async () => {
-    try {
-      // Se debe establecer la dirección ip de la máquina, al ejecutar solo con localhost generá error porque toma la ip del celular y no del equipo.
-      let response = await fetch('http://192.168.20.103:8080/WSRESTMASCOTAS/webresources/udenar.mascotas', {
-        // Se establece el tipo que se va a leer.
-        method: 'GET',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        }
-      });
-      // Variable que será leída más adelante, esto en formato json.
-      let datosJson = await response.json();
-      // Se llena diréctamente el vector con mascotas.
-      llenarMascotas(datosJson);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    obtenerMascotas();
-  }, [])
-
+const App = () => {
   return (
-    <SafeAreaView>
-      <StatusBar barStyle="light-content" />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View style={styles.body}>
-          <Cabecera />
-          {// se mapea cada valor de las mascotas y poder mostrar como una tarjeta.
-            mascotas.map((mascota, llave) =>
-              <Tarjeta
-                key={llave}
-                raza={mascota.raza}
-                imagen={mascota.imagen}
-                nombre={mascota.nombre}
-                informacion={mascota.informacion}
-              />
-            )}
+        <View style={styles.estiloContenedor}>
+          <Header titulo={'Proyecto Mascotas'}/>
+          <ListaMascotas/>
         </View>
-      </ScrollView>
-    </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  body: {
-    backgroundColor: "#4db6e2",
-  },
-});
-
+const styles={
+  estiloContenedor:{
+    flex:1,
+    backgroundColor: "#eaeaea"
+  }
+}
+//EXPORTAR EL COMPONENTE
 export default App;
