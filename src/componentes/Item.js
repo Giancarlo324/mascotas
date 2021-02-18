@@ -1,12 +1,17 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-// Exportar item, que corresponde a un contenedor grande de las tarjetas de la mascota.
+/**
+ * Contenedor grande para los detalles de cada item
+ * @param {Contenedor} props 
+ */
 const Item = (props) =>{
     return <View style={styles.estiloContenedor}>{props.children}</View>
 };
 
-// Poner estilos.
+/**
+ * Estilo para contenedor
+ */
 const styles={
     estiloContenedor:{
         flexDirection:"column",

@@ -12,9 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "react": "16.13.1",
-    "react-native": "0.63.4",
-    "react-native-axios": "^0.17.1",
-    "react-native-bootstrap-styles": "^4.5.0-r"
+    "react-native": "0.63.4"
   },
   "devDependencies": {
     "@babel/core": "7.12.16",

@@ -1,12 +1,7 @@
-# Biblioteca utilizada para los estilos
+# WSRESTFULMASCOTAS FINAL
 
-https://github.com/andrenerd/react-native-bootstrap-styles
+En la carpeta assets se encuentra el sql para importar en la base de datos.
 
-Se incluye la base de datos, el archivo se encuentra dentro de la carpeta "informacion".
+En la carpeta assets se encuentra WSRESTMASCOTAS que es el proyecto en Netbeans para ejecutar el servicio REST.
 
-La aplicación contiene un scroll para todas las tarjetas que aparezcan de acuerdo a lo solicitado.
-
-
-# Servicio WSRESTMASCOTAS
-
-Se encuentra en la carpeta "informacion" el proyecto hecho en netbeans.
+Se inlcuye una captura de pantalla del listado de mascotas agregadas.

@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author pclinux2020
+ * @author gomez
  */
 @Entity
 @Table(name = "mascotas")

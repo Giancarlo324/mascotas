@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 
-// Navbar con logo y un tamaño fijo en los estilos.
+/**
+ * Título para cabecera
+ * @param {String} props 
+ */
 const Header = (props) => {
 
     const { estiloTexto, estiloContenedor } = styles;
@@ -9,16 +12,14 @@ const Header = (props) => {
     return (
         <View style={estiloContenedor}>
             <Text style={estiloTexto}>{props.titulo}</Text>
-            <Image
-                source={require('../logo.png')}
-                // Se carga un logo para el cabecera y se le dará un tamaño predeterminado.
-                style={{ width: 50, height: 50 }}
-            />
         </View>
     );
 };
 
-// Estilos en el header.
+/**
+ * Se establecen colores para la cabecera
+ * y otros estilos como tamaño y demás.
+ */
 const styles = {
     estiloTexto: {
         fontSize: 20,
@@ -27,10 +28,11 @@ const styles = {
     estiloContenedor: {
         borderRadius: 0,
         borderWidth: 0,
-        backgroundColor: '#30A5F1',
-        alignItems: 'center',
-        paddingTop: 25,
-        paddingBottom: 25
+        backgroundColor: '#EF671E',
+        alignItems: 'flex-start',
+        paddingLeft: 10,
+        paddingTop: 15,
+        paddingBottom: 15
     }
 };
 

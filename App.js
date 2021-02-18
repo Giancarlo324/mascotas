@@ -6,28 +6,33 @@
  * @flow strict-local
  */
 
-//IMPORTAR COMPONENTES, LIBRERIAS REQUERIDAS
-
 import React from 'react';
 import { View } from 'react-native';
 import Header from './src/componentes/Header';
 import ListaMascotas from './src/componentes/ListaMascotas';
-//CUERPO DEL COMPONENTE
 
+/**
+ * Cuerpo del componente
+ */
 const App = () => {
   return (
-        <View style={styles.estiloContenedor}>
-          <Header titulo={'Proyecto Mascotas'}/>
-          <ListaMascotas/>
-        </View>
+    <View style={styles.estiloContenedor}>
+      <Header titulo={'Mascotas'} />
+      <ListaMascotas />
+    </View>
   );
 };
 
-const styles={
-  estiloContenedor:{
-    flex:1,
-    backgroundColor: "#eaeaea"
+/**
+ * Estilo contenedor grande, además el color de fondo.
+ */
+const styles = {
+  estiloContenedor: {
+    flex: 1,
+    backgroundColor: "#E7E6E7"
   }
 }
-//EXPORTAR EL COMPONENTE
+/**
+ * exportar componente
+ */
 export default App;

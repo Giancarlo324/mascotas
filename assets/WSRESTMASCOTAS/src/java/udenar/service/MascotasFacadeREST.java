@@ -21,7 +21,7 @@ import udenar.Mascotas;
 
 /**
  *
- * @author pclinux2020
+ * @author gomez
  */
 @Stateless
 @Path("udenar.mascotas")
